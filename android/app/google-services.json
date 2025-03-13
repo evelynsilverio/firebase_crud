@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "262068956843",
+    "project_id": "mascotas-c4cab",
+    "storage_bucket": "mascotas-c4cab.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262068956843:android:4f8d7725b5155da68411ee",
+        "android_client_info": {
+          "package_name": "com.example.fire_crud_5a25"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDydG7CfChn7mXBWmZOIn_1DCqDa_O7dE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

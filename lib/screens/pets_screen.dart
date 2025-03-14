@@ -21,6 +21,10 @@ class _PetsScreenState extends State<PetsScreen> {
   final TextEditingController _tipoController = TextEditingController();
   final TextEditingController _edadController = TextEditingController();
 
+  void _deletePet(String docId){
+    _firestoreService.deletePet('mascotas', docId);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,7 +98,7 @@ class _PetsScreenState extends State<PetsScreen> {
                       ),
                       onTap: null,
                       trailing: IconButton(
-                        onPressed: null, 
+                        onPressed: () => _deletePet(pet.id), 
                         icon: Icon(Icons.delete)
                         ),
                     );

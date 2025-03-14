@@ -1,4 +1,3 @@
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fire_crud_5a25/models/pet_model.dart';
 
@@ -27,5 +26,9 @@ class FirestoreService {
 
   Future<void> deletePet(String collection, String docid) {
     return _firestore.collection(collection).doc(docid).delete();
+  }
+
+  Future<void> addPet(String collection, Map<String, dynamic> data) {
+    return _firestore.collection(collection).add(data);
   }
 }

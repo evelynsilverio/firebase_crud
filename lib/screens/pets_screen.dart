@@ -25,6 +25,21 @@ class _PetsScreenState extends State<PetsScreen> {
     _firestoreService.deletePet('mascotas', docId);
   }
 
+  void _addPet(){
+    _firestoreService.addPet('mascotas', {
+      'nombre': _nombreController.text,
+      'tipo': _tipoController.text,
+      'raza': _razaController.text,
+      'genero': _generoController.text,
+      'edad': int.parse(_edadController.text),
+    });
+    _nombreController.clear();
+    _tipoController.clear();
+    _razaController.clear();
+    _generoController.clear();
+    _edadController.clear();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,7 +79,7 @@ class _PetsScreenState extends State<PetsScreen> {
               ),
           ),
           ElevatedButton(
-            onPressed: null,
+            onPressed: _addPet,
             child: const Text('Agregar mascota'),
           ),
           //Aquí se mostrarán las mascotas
